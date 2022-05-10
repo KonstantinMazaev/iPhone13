@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/svg/apple.svg">
+    <link rel="preload" href="fonts/SFUIText-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SFUIText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SFUIText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>iPhone 13</title>
   </head>
@@ -98,7 +103,7 @@
         <section class="order">
           <div class="container">
             <h2 class="order__title title">Оформить предзаказ</h2>
-            <form class="order__form form" action="#"> 
+            <form class="order__form form" action="#" id="form-order">
               <fieldset class="form__box">
                 <legend class="form__box-title">Персональные данные</legend>
                 <label class="form__label" for="fullName">ФИО</label>
@@ -127,7 +132,7 @@
                   <option value="iPhone13ProMax">iPhone 13 Pro Max</option>
                 </select>
                 <label class="form__label" for="color">Цвет</label>
-                <select class="form__select" name="model" id="model">
+                <select class="form__select" name="color" id="color">
                   <option value="Pearl">Pearl</option>
                   <option value="Graphite">Graphite</option>
                   <option value="SunsetGold">Sunset Gold</option>
@@ -143,20 +148,20 @@
               <fieldset class="form__box">
                 <legend class="form__box-title">Аксессуары</legend>
                 <label class="form__label checkbox">
-                  <input type="checkbox" name="accessories" id="case">Чехол
+                  <input class="checkbox__input" type="checkbox" name="accessories" id="case">Чехол
                 </label>
                 <label class="form__label checkbox">
-                  <input type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
+                  <input class="checkbox__input" type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
                 </label>
                 <label class="form__label checkbox">
-                  <input type="checkbox" name="accessories" id="glass">Защитное стекло
+                  <input class="checkbox__input" type="checkbox" name="accessories" id="glass">Защитное стекло
                 </label>
                 <label class="form__label checkbox">
-                  <input type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
+                  <input class="checkbox__input" type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
                 </label>
               </fieldset>
-              <button class="form__btn btn" type="submit">Оформить</button>
             </form>
+            <button class="form__btn btn" type="submit" form="form-order">Оформить</button>
           </div>
         </section>
       </main>
@@ -173,6 +178,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/choices.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
