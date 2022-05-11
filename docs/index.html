@@ -103,24 +103,24 @@
         <section class="order">
           <div class="container">
             <h2 class="order__title title">Оформить предзаказ</h2>
-            <form class="order__form form" action="#" id="form-order">
+            <form class="order__form form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="form-order">
               <fieldset class="form__box">
                 <legend class="form__box-title">Персональные данные</legend>
-                <label class="form__label" for="fullName">ФИО</label>
-                <input class="form__input" type="text" name="fullName" id="fullName">
-                <label class="form__label" for="phone">Телефон</label>
-                <input class="form__input" type="text" name="phone" id="phone">
-                <label class="form__label" for="email">E-mail</label>
-                <input class="form__input" type="email" name="email" id="email">
+                <label class="form__label" for="fullName">ФИО<sup>*</sup></label>
+                <input class="form__input" type="text" name="fullName" required id="fullName">
+                <label class="form__label" for="phone">Телефон<sup>*</sup></label>
+                <input class="form__input" type="text" name="phone" required id="phone">
+                <label class="form__label" for="email">E-mail<sup>*</sup></label>
+                <input class="form__input" type="email" name="email" required id="email">
               </fieldset>
               <fieldset class="form__box">
                 <legend class="form__box-title">Адрес доставки</legend>
-                <label class="form__label" for="city">Город</label>
-                <input class="form__input" type="text" name="city" id="city">
-                <label class="form__label" for="index">Индекс</label>
-                <input class="form__input" type="phone" name="index" id="index">
-                <label class="form__label" for="address">Адрес</label>
-                <input class="form__input" type="text" name="address" id="address">
+                <label class="form__label" for="city">Город<sup>*</sup></label>
+                <input class="form__input" type="text" name="city" required id="city">
+                <label class="form__label" for="index">Индекс<sup>*</sup></label>
+                <input class="form__input" type="phone" name="index" required id="index">
+                <label class="form__label" for="address">Адрес<sup>*</sup></label>
+                <input class="form__input" type="text" name="address" required id="address">
               </fieldset>
               <fieldset class="form__box">
                 <legend class="form__box-title">Выбор модели</legend>
@@ -148,16 +148,16 @@
               <fieldset class="form__box">
                 <legend class="form__box-title">Аксессуары</legend>
                 <label class="form__label checkbox">
-                  <input class="checkbox__input" type="checkbox" name="accessories" id="case">Чехол
+                  <input class="checkbox__input" type="checkbox" name="accessories" value="case">Чехол
                 </label>
                 <label class="form__label checkbox">
-                  <input class="checkbox__input" type="checkbox" name="accessories" id="AirPods">Наушники AirPods 3
+                  <input class="checkbox__input" type="checkbox" name="accessories" value="AirPods">Наушники AirPods 3
                 </label>
                 <label class="form__label checkbox">
-                  <input class="checkbox__input" type="checkbox" name="accessories" id="glass">Защитное стекло
+                  <input class="checkbox__input" type="checkbox" name="accessories" value="glass">Защитное стекло
                 </label>
                 <label class="form__label checkbox">
-                  <input class="checkbox__input" type="checkbox" name="accessories" id="MagSafe">Зарядное устройство MagSafe
+                  <input class="checkbox__input" type="checkbox" name="accessories" value="MagSafe">Зарядное устройство MagSafe
                 </label>
               </fieldset>
             </form>
@@ -178,6 +178,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/choices.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
